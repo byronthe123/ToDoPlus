@@ -1,0 +1,437 @@
+/* html { 
+  overflow-y: auto;
+} */
+
+* {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container-fluid {
+  display: table;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*---------------------- PROJECTS ------------------------*/
+
+.show-on-hover-project {
+  opacity: 0;
+	transition: all 0.5s;
+}
+
+.project-item:hover .show-on-hover-project {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.row-projects-list {
+  background-color: #b5b5b7;
+}
+
+.div-projects {
+  background-color: #b5b5b7;
+}
+
+.project {
+  /* border: 1px black solid; */
+  width: 100%;
+  /* background-color: red; */
+}
+
+.add-project {
+  opacity: 0;
+	transition: all 0.5s;
+}
+
+.div-project-list:hover .add-project{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.completed-projects {
+  opacity: 0.5;
+}
+
+/*---------------------- TASKS ------------------------*/
+
+.add-task {
+  opacity: 0;
+	transition: all 0.5s;
+}
+
+.div-tasks-list:hover .add-task{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.task-card {
+  background-color: #F4F4F6;
+}
+
+.completed-task-card {
+  background: rgba(255, 252, 252, 0.50);
+  color: green;
+}
+
+.completed-subtasks {
+  opacity: 0.5;
+}
+
+.show-on-hover-tasks {
+  opacity: 0;
+	transition: all 0.5s;
+}
+
+.task-card:hover .show-on-hover-tasks{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.selected-task {
+  background-color: #f2b632;
+}
+
+.taskdiv-logo {
+  background-image: url('/assets/images/logo2.svg'); 
+  background-size: cover;
+  background-position: center; 
+  height: 100%;
+  width: 100%;
+}
+
+/*---------------------- SUBTASKS ------------------------*/
+
+.add-subtask {
+  opacity: 0;
+	transition: all 0.5s;
+}
+
+.div-subtask-list:hover .add-subtask{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none; 
+}
+
+.hint {
+  color: black;
+}
+
+.div-task-list {
+  background-color: #F4F4F6;
+}
+
+.div-subtask-list {
+  background-color: #252839;
+  background-color: #677077;
+  color: white;
+}
+
+.col-subtask-list {
+  background-color: #252839;
+  background-color: #677077;
+  color: white;
+}
+
+/*---------------------- STATUS BAR ------------------------*/
+.status-bar {
+  /* background-color: #677077; */
+  background-color: #252839;
+  height: 110px;
+}
+
+.status-bar-text {
+  margin-left: 130px;
+}
+
+.status-percent {
+  color: #f2b632;
+  position: absolute;
+  left: 17%;
+  top: 37%;
+  font-family: 'Electrolize', sans-serif;
+}
+
+.navbar {
+  color: white;
+  /* background-color: #252839; */
+  background-color: #677077;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.title {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+}
+
+.title:hover {
+  color: #f2b632;
+  cursor: pointer;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/*---------------------- STATUS BAR GRAPH ------------------------*/
+.status-bar-graph-wrapper1 {
+  height: 20px;
+  width: 0px;
+  position: relative;
+}
+
+.statusbar-graph > .rv-xy-plot__inner {
+  width: 150px;
+  position: absolute;
+  left: -25%;
+  top: -5%;
+}
+
+.out-time {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.out-time-container {
+  position: absolute;
+  right: 35%;
+  top: 37%;
+  min-width: 199px;
+  border: 1px red;
+  background-color: red;
+}
+
+/*---------------------- STATS ------------------------*/
+.positiveDelta {
+  color: green;
+}
+
+.negativeDelta {
+  color: red;
+}
+
+.stats-subtitle {
+  color: black;
+  font-family: 'Electrolize', sans-serif;
+}
+/*---------------------- BUTTONS ------------------------*/
+.buttonless {
+  color: inhert;  
+}
+
+.buttonless:hover {
+  cursor: pointer;
+}
+
+/*---------------------- TIMER MODAL ------------------------*/
+/* i.fas.fa-stopwatch:before {
+  content: none;
+} */
+.timer-modal-graph > .rv-xy-plot__inner {
+  width: 300px;
+  position: absolute;
+  left: -5%;
+}
+
+/* .status-bar-graph-wrapper1 {
+  height: 20px;
+  width: 0px;
+  position: relative;
+} */
+
+
+/*---------------------- GOAL MODAL ------------------------*/
+.modal-content {
+  text-align: center;
+}
+
+.btn-cancel {
+  background: none;
+  border: none;
+  color: black;
+}
+
+.btn-cancel:hover {
+  background: none;
+  color: #252839;
+}
+
+/*---------------------- HOME ------------------------*/
+.home {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  background: linear-gradient(-45deg, #f5f5f8, #f2b632,#b5b5b7, #f5f5f8);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 5s ease infinite;
+  -moz-animation: Gradient 5s ease infinite;
+  animation: Gradient 5s ease infinite;
+}
+
+.sub-home {
+  background-image: url('/assets/images/background.svg'); 
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.login {
+  position: absolute;
+  bottom: 5%;
+}
+
+.btn-login {
+  background-color: #b5b5b7;
+  color: black;
+  border: #252839;
+}
+
+.btn-login:hover {
+  background-color: #677077;
+  color: white;
+}
+
+/*---------------------- GENERAL STYLES ------------------------*/
+body, #root, .container-fluid, .main-row {
+  min-height: 100%;
+  /* background-color: #FFCC00; */
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.container-fluid {
+  background-color: #F4F4F6;
+}
+
+html {
+  height: 85%;
+}
+
+.full-height {
+  min-height: 100%;
+  height: 100%;
+}
+
+.full-width {
+  width:100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.align-right {
+  float: right;
+  padding: 0 5px 0 5px;
+}
+
+.none {
+  background: none;
+}
+
+.subtitle {
+  color: black;
+  font-family: 'Electrolize', sans-serif;
+  background-color: #9c9c9c;
+  background-blend-mode: darken;
+  /* text-shadow:
+  -1px -1px 0 white,
+  1px -1px 0 white,
+  -1px 1px 0 white,
+  1px 1px 0 white; */
+}
+
+.task-subtitle {
+  color: black;
+  font-family: 'Electrolize', sans-serif;
+  background-color: rgb(204, 204, 206);
+  background-blend-mode: darken;
+}
+
+.subtask-subtitle {
+  color: white;
+  font-family: 'Electrolize', sans-serif;
+  background-color: #5b6268;
+  background-blend-mode: darken;
+}
+
+.dropdown-item:active {
+  background-color: #5b6268;
+}
+
+/* .button:active {
+  color: #5b6268;
+} */
+
+/* * {
+  border: 0.2px red solid;
+}  */
