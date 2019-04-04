@@ -19,6 +19,7 @@ module.exports = {
                         db.checkProductivityRecord(user._id, (err, doc) => {
                             if(err) {
                                 console.log(err);
+                                return res.json(err);
                             }
                             return res.json(doc);
                         })
@@ -39,9 +40,9 @@ module.exports = {
     addProject: (req, res) => {
         db.addProject(req.body._id, {projectName: req.body.projectName}, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
-            console.log(doc);
             return res.json(doc);
         })
     },
@@ -49,7 +50,8 @@ module.exports = {
     deleteProject: (req, res) => {
         db.deleteProject(req.body._id, req.body.projectId, (err, doc) => {
             if(err) {
-                return res.status(422).json(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         })
@@ -58,7 +60,8 @@ module.exports = {
     updateProject: (req, res) => {
         db.updateProject(req.body._id, req.body.projectId, req.body.updatedName, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         })
@@ -67,6 +70,7 @@ module.exports = {
     completeProject: (req, res) => {
         db.completeProject(req.body._id, req.body.projectId, (err, doc) => {
             if(err) {
+                console.log(err);
                 return res.json(err);
             }
             return res.json(doc);
@@ -76,7 +80,8 @@ module.exports = {
     addTask: (req, res) => {
         db.addTask(req.body._id, req.body.projectId, {taskName: req.body.task}, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             console.log(doc);
             return res.json(doc);
@@ -87,7 +92,7 @@ module.exports = {
         db.updateTask(req.body._id, req.body.projectId, req.body.taskId, req.body.updatedTaskName, (err, doc) => {
             if(err) {
                 console.log(err);
-                return next(err);
+                return res.json(err);
             }
             return res.json(doc);
         });
@@ -96,7 +101,8 @@ module.exports = {
     deleteTask: (req, res) => {
         db.deleteTask(req.body._id, req.body.projectId, req.body.taskId, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         })
@@ -105,8 +111,9 @@ module.exports = {
     setTaskDueDate: (req, res) => {
         db.setTaskDueDate(req.body._id, req.body.projectId, req.body.taskId, req.body.dueDate, (err, doc) => {
             if(err) {
+                console.log(err);
                 return res.json(err);
-            } 
+            }
             return res.json(doc);
         });
     },
@@ -114,7 +121,8 @@ module.exports = {
     addSubtask: (req, res) => {
         db.addSubtask(req.body._id, req.body.projectId, req.body.taskId, {subtaskName: req.body.subtask}, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         }); 
@@ -123,7 +131,8 @@ module.exports = {
     completeTask: (req, res) => {
         db.completeTask(req.body._id, req.body.projectId, req.body.taskId, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         });
@@ -132,7 +141,8 @@ module.exports = {
     updateSubtask: (req, res) => {
         db.updateSubtask(req.body._id, req.body.projectId, req.body.taskId, req.body.subtaskId, req.body.updatedSubtaskName, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         });
@@ -141,7 +151,8 @@ module.exports = {
     completeSubtask: (req, res) => {
         db.completeSubtask(req.body._id, req.body.projectId, req.body.taskId, req.body.subtaskId, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         });
@@ -150,7 +161,8 @@ module.exports = {
     deleteSubtask: (req, res) => {
         db.deleteSubtask(req.body._id, req.body.projectId, req.body.taskId, req.body.subtaskId, (err, doc) => {
             if(err) {
-                return next(err);
+                console.log(err);
+                return res.json(err);
             }
             return res.json(doc);
         })
@@ -160,6 +172,7 @@ module.exports = {
         db.updateEntryTime(req.body._id, req.body.taskId, req.body.taskName, (err, doc) => {
             if(err) {
                 console.log(err);
+                return res.json(err);
             }
             console.log(doc);
             return res.json(doc);
