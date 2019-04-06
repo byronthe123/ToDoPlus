@@ -107,7 +107,6 @@ const getTaskIndex = (userId, projectId, taskId, callback) => {
             const index = project.tasks.findIndex((task) => task._id.toString() === taskId.toString());
             console.log(`taskId: ${taskId}`);
             console.log(`index = ${index}`);
-            // return callback(err, doc);
             return callback(index);
         }
     )
